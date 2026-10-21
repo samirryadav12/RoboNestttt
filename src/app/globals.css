@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #181A1C;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom organic blob masks and decorative strokes */
+.blob-mask-1 {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.blob-mask-2 {
+  border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+}
+
+.blob-mask-3 {
+  border-radius: 45% 55% 65% 35% / 55% 45% 55% 45%;
+}
+
+/* Organic hand-drawn doodle underline */
+.hand-drawn-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hand-drawn-underline::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,12 Q 25,3 50,14 T 100,10' fill='none' stroke='%23C85A32' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8E2D9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C85A32;
+}
